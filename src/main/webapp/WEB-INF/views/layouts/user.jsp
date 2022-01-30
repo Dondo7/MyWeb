@@ -11,16 +11,19 @@
   <head>
   <c:url value =""/>
     <meta charset="utf-8">
-    <title>Twitter Bootstrap shopping cart</title>
+    <title>Moji shopping cart</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Bootstrap styles -->
     <link href="<c:url value ="/assets/css/bootstrap.css"/>" rel="stylesheet"/>
     <!-- Customize styles -->
-    <link href="<c:url value ="/assets/style.css"/>" rel="stylesheet"/>
+    <link href="<c:url value ="/assets/css/user/style.css"/>" rel="stylesheet"/>
     <!-- font awesome styles -->
 	<link href="<c:url value ="/assets/font-awesome/css/font-awesome.css"/>" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
 		<!--[if IE 7]>
 			<link href="<c:url value ="/assets/css/font-awesome-ie7.min.css"/>" rel="stylesheet">
 		<![endif]-->
@@ -33,9 +36,234 @@
     <link rel="shortcut icon" href="<c:url value ="/assets/ico/favicon.ico"/>">
   </head>
 <body>
+
+<header class="header sty-none">
+	<div class="header-top">
+		<div class="container">
+			<div class="row">
+				<div class="col text-right">
+					<p>
+						<span style="font-size: 14px;">
+							<a href="...">HỆ THỐNG CỬA HÀNG</a>
+						</span>
+					</p>
+					<p>
+						<span style="font-size: 14px;">
+							<a href="...">VỀ MOJI</a>
+						</span>
+					</p>
+					<p>
+						<span style="font-size: 14px;">
+							<a href="...">HỆ THỐNG CỬA HÀNG</a>
+						</span>
+					</p>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="header-content top">
+		<div class="container">
+			<div class="row align-center">
+				<div class="head-col-left col-lg-3 col-12">
+					<div class="js-menu-svg d-inline-flex align-items-center  justify-content-center d-lg-none">
+						<img src="https://moji.vn/tp/T0299/img/svg/menu-trans.svg" alt="Open navagation">
+					</div>
+					<a href="/MyWeb/trang-chu/" class="logo">
+						<img src="https://storage.googleapis.com/cdn.nhanh.vn/store/7534/logo_1641521769_Season Tết âm_logo web.png" alt="Logo">
+					</a>
+				</div>
+				<div class="head-col-center col-lg-6 d-none d-lg-block">
+					<form class="form-search" action="search" method="get">
+						<div class="input-group">
+							<input type="text" class="form-control" name="q" placeholder="Tìm kiếm sản phẩm">
+							<span class="input-group-btn">
+								<button class="btn btn-blue" type="submit">
+									<i class="fa fa-search"> </i>
+								</button>
+							</span>
+						</div>
+					</form>
+					<div class="research d-lg-block">
+						<p>
+							<a href="">Mèo may mắn</a>
+							<a href="">Ví</a>
+							<a href="">Đèn ngủ</a>
+							<a href="">Sticker</a>
+							<a href="">Bao lì xì</a>
+							<a href="">Nước rửa tay</a>
+							<a href="">Strap</a>
+						</p>
+					</div>
+				</div>
+				<div class="head-col-right col-lg-3 col-12">
+					<div class="header-right d-flex align-item-start">
+						<ul class="header-user d-none d-md-block">
+							<li>
+								<a href="user/signin">Đăng nhập |</a>
+								<a href="user/signup">Đăng ký</a>
+							</li>
+						</ul>
+						<a href="/user/signin" class="js-open-user d-md-none">
+							<img src="https://moji.vn/tp/T0299/img/svg/user.svg" alt="Đăng nhập" width="25" height="25">
+						</a>
+						<div class="count-cart" title="Giỏ hàng">
+							<div class="count-cart-icon">
+								<span class="count d-flex align-item-center justify-content-center">0</span>
+							</div>
+							<div id="js-rs-mini-cart" class="mini-shopping-cart">
+								<p class="mini-shopping-cart__empty-message">Bạn chưa có sản phẩm trong giỏ hàng</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix">			
+		</div>
+		<div class="fr-mobile container d-block d-lg-none">
+			<form class="form-search xs" action="/search" method="get">
+				<div class="input-group">
+					<input type="text" class="form-control" name="q" placeholder="Tìm kiếm sản phẩm">
+					<span class="input-group-btn">
+						<button class="btn btn-pink" type="submit">
+							<i class="fa fa-search"> </i>
+						</button>
+					</span>
+				</div>
+			</form>
+			<div class="research d-lg-block">
+				<p>
+					<a href="">Mèo may mắn</a>
+					<a href="">Ví</a>
+					<a href="">Đèn ngủ</a>
+					<a href="">Sticker</a>
+					<a href="">Bao lì xì</a>
+					<a href="">Nước rửa tay</a>
+					<a href="">Strap</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="navigation">
+		<div class="js-menu-close d-flex align-item-center justify-content-between d-lg-none">
+			<span>
+				<img src="https://moji.vn/tp/T0299/img/svg/menu.svg" alt="Close navigation" width="25" height="25">
+				Menu
+			</span>
+			<img src="https://moji.vn/tp/T0299/img/svg/close.svg" alt="Close navigation" width="25" height="25">
+		</div>
+		<div class="container js-container">
+			<div class="row">
+				<ul class="col flex justify-content-between">
+					<li class="all">
+						<a href="/product">TẤT CẢ</a>
+						<span class="fa fa-angle-down"></span>
+						<div class="menu_all" style="display: none;" >
+							<div class="container">
+								<!-- ul class="menu-all-list" -->
+							</div>
+						</div>
+					</li>
+					<li class="has-dropdown">
+						<a href="">Gấu bông và gối</a>
+						<span class="fa fa-angle-down"></span>
+						<ul class="level-2" style="display:none;">
+							<li>
+								<a href="">Gấu bông cute</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a href="">Túi ví</a>
+						<span class="fa fa-angle-down"></span>
+						<ul class="level-2" style="display:none;">
+							<li>
+								<a href="">Gấu bông cute</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a href="">Văn phòng phẩm</a>
+						<span class="fa fa-angle-down"></span>
+						<ul class="level-2" style="display:none;">
+							<li>
+								<a href="">Gấu bông cute</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a href="">Điện tử và điện thoại</a>
+						<span class="fa fa-angle-down"></span>
+						<ul class="level-2" style="display:none;">
+							<li>
+								<a href="">Gấu bông cute</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a href="">Đồ gia dụng</a>
+						<span class="fa fa-angle-down"></span>
+						<ul class="level-2" style="display:none;">
+							<li>
+								<a href="">Gấu bông cute</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a href="">Phụ kiện thời trang</a>
+						<span class="fa fa-angle-down"></span>
+						<ul class="level-2" style="display:none;">
+							<li>
+								<a href="">Gấu bông cute</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a href="">Trang điểm</a>
+						<span class="fa fa-angle-down"></span>
+						<ul class="level-2" style="display:none;">
+							<li>
+								<a href="">Gấu bông cute</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a href="">Du lịch</a>
+						<span class="fa fa-angle-down"></span>
+						<ul class="level-2" style="display:none;">
+							<li>
+								<a href="">Gấu bông cute</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a href="">Đồ chơi</a>
+						<span class="fa fa-angle-down"></span>
+						<ul class="level-2" style="display:none;">
+							<li>
+								<a href="">Gấu bông cute</a>
+							</li>
+						</ul>
+					</li>
+					<li class="has-dropdown">
+						<a href="">Trang trí</a>
+						<span class="fa fa-angle-down"></span>
+						<ul class="level-2" style="display:none;">
+							<li>
+								<a href="">Gấu bông cute</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="nava-mask d-lg-none"></div>
+	</div>
+</header>
 <!-- 
 	Upper Header Section 
--->
+
 <div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="topNav">
 		<div class="container">
@@ -55,10 +283,10 @@
 		</div>
 	</div>
 </div>
-
+-->
 <!--
 Lower Header Section 
--->
+
 <div class="container">
 <div id="gototop"> </div>
 <header id="header">
@@ -87,10 +315,10 @@ Lower Header Section
 	</div>
 </div>
 </header>
-
+-->
 <!--
 Navigation Bar Section 
--->
+
 <div class="navbar">
 	  <div class="navbar-inner">
 		<div class="container">
@@ -136,6 +364,7 @@ Navigation Bar Section
 		</div>
 	  </div>
 	</div>
+-->
 <!-- 
 Body Section 
 -->
@@ -463,56 +692,86 @@ Clients
 <!--
 Footer
 -->
-<footer class="footer">
-<div class="row-fluid">
-<div class="span2">
-<h5>Your Account</h5>
-<a href="#">YOUR ACCOUNT</a><br>
-<a href="#">PERSONAL INFORMATION</a><br>
-<a href="#">ADDRESSES</a><br>
-<a href="#">DISCOUNT</a><br>
-<a href="#">ORDER HISTORY</a><br>
- </div>
-<div class="span2">
-<h5>Iinformation</h5>
-<a href="contact.html">CONTACT</a><br>
-<a href="#">SITEMAP</a><br>
-<a href="#">LEGAL NOTICE</a><br>
-<a href="#">TERMS AND CONDITIONS</a><br>
-<a href="#">ABOUT US</a><br>
- </div>
-<div class="span2">
-<h5>Our Offer</h5>
-<a href="#">NEW PRODUCTS</a> <br>
-<a href="#">TOP SELLERS</a><br>
-<a href="#">SPECIALS</a><br>
-<a href="#">MANUFACTURERS</a><br>
-<a href="#">SUPPLIERS</a> <br/>
- </div>
- <div class="span6">
-<h5>The standard chunk of Lorem</h5>
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
- those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et 
- Malorum" by Cicero are also reproduced in their exact original form, 
-accompanied by English versions from the 1914 translation by H. Rackham.
- </div>
- </div>
+<footer>
+	<div class="f-start">
+		<div class="container">
+			<div class="row">
+				<div class="f-hotline col-lg-2 col-md-3 col-sm-12 col-xs-12">
+					<div class="item d-inline-flex align-items-end full clearfix">
+						<div class="pull-left">
+							<i class="fa fa-phone-square"></i>
+							<!-- ::before -->
+						</div>
+						<a href="..." class="pull-left">" Hotline "
+							<span class="big full clearfix">"0xx xxx xxxx"</span>
+						</a>
+						<!-- ::after -->
+					</div>
+					<div class="item d-inline-flex align-items-end full clearfix">
+						<div class="pull-left">
+							<i class="fa fa-envelope"></i>
+							<!-- ::before -->
+						</div>
+						<a href="..." class="pull-left">" Email "
+							<span class="big full clearfix">"xxx@abc.vn"</span>
+						</a>
+						<!-- ::after -->
+					</div>
+					<div class="item f-txt-l full clearfix">
+						<p>
+							<span style="font-size: 14px;">
+								<a href="..." target="_blank" rel="noreferrer noopener">CHÍNH SÁCH BÁN HÀNG</a>
+							</span>
+						</p>
+						<p>
+							<span style="font-size: 14px;">
+								<a href="..." target="_blank" rel="noreferrer noopener">HƯỚNG DẪN MUA HÀNG</a>
+							</span>
+						</p>
+						<p></p>
+						<!-- ::after -->
+					</div>
+				</div>
+				<div class="f-room f-room-2 col-lg-5 col-md-4 col-sm-12 col-xs-12">
+					<h3 class="f-title">TP. HỒ CHÍ MINH (9h30 - 22h)</h3>
+					<div class="f-room-text">
+						<ul>
+							<li>"92&nbsp;Hồ Tùng Mậu, P.Bến Nghé,&nbsp;Q1"</li>
+							<li>"459E Nguyễn Đình Chiểu, P.5, Q.3&nbsp;(ngã tư Cao Thắng)"</li>
+							<li>"708 Sư Vạn Hạnh, P.12, Q.10 (đối diện chéo Vạn Hạnh Mall)"</li>
+							<li>"87 Bàu Cát, P.14, Q.Tân Bình&nbsp;(khúc giao Nguyễn Hồng Đào)"</li>
+							<li>"54A Hoa Lan, P.2, Q.Phú Nhuận (gần Pizza Hut Phan Xích Long)"</li>
+						</ul>
+					</div>
+				</div>
+				<div class="f-lo-social col-lg-2 col-md-2 col-sm-12 col-xs-12">
+					<a href="/" class="f-logo text-center">
+						<img data-sizes="auto" class="lazyautosizes ls-is-cached lazyloaded" src="..." data-src="..." alt="logo" sizes="107px">
+					</a>
+					<h3 class="f-title mt-3">Hãy kết nối với chúng mình</h3>
+					<div class="social text-center">
+						<a href="...">
+							<img data-sizes="auto" class="lazyautosizes ls-is-cached lazyloaded" src="https://moji.vn/tp/T0299/img/social-color-insta.png" alt="instagram" sizes="24px">
+						</a>
+						<a href="...">
+							<img data-sizes="auto" class="lazyautosizes ls-is-cached lazyloaded" src="https://moji.vn/tp/T0299/img/fb-logo.png" alt="facebook" sizes="24px">
+						</a>
+						<a href="...">
+							<img data-sizes="auto" class="lazyautosizes ls-is-cached lazyloaded" src="https://moji.vn/tp/T0299/img/social-color-youtube.png" alt="youtube" sizes="34px">
+						</a>
+					</div>
+					<a class="logo-bct" href="..." target="_blank" title="Đã thông báo Bộ Công Thương">
+						<img class="lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" src="https://moji.vn/img/dathongbaobocongthuong.png" alt="Đã thông báo Bộ Công Thương" height="219" width="200">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="f-end container-fluid text-center">
+		<p>Copyright © 2022 . All Rights Reserved</p>
+	</div>
 </footer>
-</div><!-- /container -->
 
-<div class="copyright">
-<div class="container">
-	<p class="pull-right">
-		<a href="#"><img src="assets/img/maestro.png" alt="payment"></a>
-		<a href="#"><img src="assets/img/mc.png" alt="payment"></a>
-		<a href="#"><img src="assets/img/pp.png" alt="payment"></a>
-		<a href="#"><img src="assets/img/visa.png" alt="payment"></a>
-		<a href="#"><img src="assets/img/disc.png" alt="payment"></a>
-	</p>
-	<span>Copyright &copy; 2013<br> bootstrap ecommerce shopping template</span>
-</div>
-</div>
-<a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<c:url value ="/assets/js/jquery.js"/>"></script>
 	<script src="<c:url value ="/assets/js/bootstrap.min.js"/>"></script>
